@@ -13,6 +13,8 @@
 - php bin/console make:entity EntityName
 # Create migration (with docker database)
 - symfony console make:migration
+# Create DB query
+- symfony console doctrine:migrations:migrate
 
 ========================== DOCKER =========================
 
@@ -20,8 +22,7 @@ php bin/console make:docker:database
 docker-compose up -d
 docker-compose up
 
-symfony console make:migration
-symfony console doctrine:migrations:migrate
+sudo chmod -R a+rwx symfonyMicroservice
 
 
 # Show symfony configuration
