@@ -16,16 +16,18 @@
 # Create DB query
 - symfony console doctrine:migrations:migrate
 
-========================== DOCKER =========================
-
+# Docker
 php bin/console make:docker:database
 docker-compose up -d
 docker-compose up
 
 sudo chmod -R a+rwx symfonyMicroservice
 
-
 # Show symfony configuration
 - symfony var:export --multiline
 # Call to generate window in PHPStorm
 - Alt+Insert
+
+# Start PHPUnit test
+- vendor/bin/phpunit tests/unit/LowestPriceFilterTest.php
+
